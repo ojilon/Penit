@@ -16,3 +16,8 @@ PenitData/
 # Go
 *.test
 coverage.out
+
+
+#ignore signing files
+*jks
+config.json
