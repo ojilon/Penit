@@ -1,2 +1,18 @@
-*jks
-scripts/config.json
+# Binaries
+/penit
+/penit.exe
+/dist/
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Local data (never commit)
+PenitData/
+**/config.json.bak
+
+# Go
+*.test
+coverage.out
