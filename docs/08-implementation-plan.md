@@ -14,11 +14,12 @@ Work **one slice at a time**. Each step should leave a compilable binary.
 
 ## Phase 1 — Build + error capture
 
-- [ ] `internal/build` – Gradle runner with live stream + cancel
-- [ ] Gradle error headline extractor
-- [ ] `cmd/build`, `cmd/test`
-- [ ] Persist logs under data-root
-- [ ] Report absolute APK paths on success / expected paths on failure
+- [x] `internal/build` – Gradle runner with live stream
+- [x] Gradle error headline extractor
+- [x] `cmd/build`, `cmd/test`
+- [x] Persist logs under data-root
+- [x] Report absolute APK paths on success / expected paths on failure
+- [ ] Cancel (Ctrl+C / process group) polish — basic exit works; TUI cancel in Phase 5
 
 ## Phase 2 — Version + package
 
@@ -67,10 +68,3 @@ Work **one slice at a time**. Each step should leave a compilable binary.
 - Prefer absolute paths in user-facing messages.
 - All user errors should be actionable (what to run / which file to edit).
 - Tests for pure helpers (error parser, version R/W, path resolution); integration tests optional early on.
-
-## Immediate next actions after docs
-
-1. Write `README.md` (with the migration notice).
-2. Scaffold `go.mod`, `main.go`, `cmd/root.go`.
-3. Implement `config` + `storage` + `init`.
-4. Then Phase 1 build runner.
